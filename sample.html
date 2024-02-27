@@ -1,0 +1,34 @@
+<html>
+<title>
+GIT PROGRAM
+</title>
+<body>
+<label>Name:</label> <input id="name"></input><br>
+<label>Gender:</label> <!--<input id="gender"/>-->
+<select id="gender">
+ <option value="male">Male</option>
+ <option value="female">Female</option>
+</select>
+<input type="submit" onclick="show()"/>
+<script>
+function show() {
+ var name = document.getElementById("name").value;
+// var gender = document.getElementById("gender").value;
+ var genderarray = document.getElementById("gender");
+ var selectIndex = genderarray.selectedIndex;
+ var gender = genderarray[selectedIndex].value;
+ var message = '';
+ if(gender === 'male') {
+     message = 'Hello Mr. '+name;
+ } else if(gender === 'female') {
+     message = 'Hello Miss. '+name;
+ } else {
+     message = 'Hello '+name;
+ } 
+ console.log(message);
+ alert(message);
+ }
+</script>
+</body>
+</html>
+
